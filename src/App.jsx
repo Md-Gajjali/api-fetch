@@ -2,23 +2,31 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import dan from './assets/dangerus.jpg'
 import Card from './components/Card'
+import { DiScriptcs } from 'react-icons/di'
 
 
 function App() {
 
 
-  const[product,setProduct] = useState([])
+  // const[product,setProduct] = useState([])
 
-  useEffect(()=>{
+  // useEffect(()=>{
+  //   fetch('https://dummyjson.com/products')
+  //   .then(res => res.json())
+  //   .then((data)=> setProduct(data.products));
+  // },[])
+
+  // console.log(product);
+  
+
+  const[product,setProduct]=useState([])
+
+  
+  useEffect(()=>{ 
     fetch('https://dummyjson.com/products')
     .then(res => res.json())
     .then((data)=> setProduct(data.products));
-  },[])
-
-  console.log(product);
-  
-  // console.log(products);
-  
+    },[])
 
   // const[count,setCount]=useState(100)
 
@@ -45,7 +53,7 @@ function App() {
 
         <div className='contaier container m-auto mt-20'>
             <div className='flex text-center flex-wrap justify-between'>
-              {
+              {/* {
                 product.map((items)=>{
                   return(
                     <Card 
@@ -53,10 +61,25 @@ function App() {
                       title={items.title}
                       price={items.price}
                       rating={items.rating}
+                      describtion={items.description}
                     />
 
                   )
                 })
+              } */}
+
+              {
+                product.map((items)=>{
+                  return(
+                    <Card 
+                    price={items.price}
+                    imgSrc={items.thumbnail}
+                    rating={items.rating}
+                    describtion={items.describtion}
+                    title={items.title}
+                    />
+                )
+              })
               }
 
             </div>

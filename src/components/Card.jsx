@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({imgSrc, rating, title,price}) => {
+const Card = ({imgSrc, rating, title,price,describtion}) => {
     return (
         <div>
             <div className="w-[300px] mt-5 m-auto mb-5 max-w-sm bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs">
@@ -21,7 +21,7 @@ const Card = ({imgSrc, rating, title,price}) => {
                     <a href="#">
                         <h5 className="text-xl text-heading font-semibold tracking-tight">{title}</h5>
                     </a>
-                    <p>{describtion}</p>
+                    <p className=' line-clamp-3 text-justify'>{describtion}</p>
                     <div className="flex items-center justify-between mt-6">
                         <span className="text-3xl font-extrabold text-heading">{price}</span>
                         <button type="button" className="inline-flex items-center  text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
