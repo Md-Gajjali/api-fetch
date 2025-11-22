@@ -3,6 +3,7 @@ import './App.css'
 import dan from './assets/dangerus.jpg'
 import Card from './components/Card'
 import { DiScriptcs } from 'react-icons/di'
+import ComOne from './components/ComOne'
 
 
 function App() {
@@ -50,8 +51,8 @@ function App() {
         {/* <Heading count={count} counter={counter} />
         <button onClick={()=> setCount(count + 1)} className='px-5 py-3 bg-amber-400 mt-4 border-2 hover:bg-red-500 mr-1 hover:text-3xl'>click</button> 
         <button className='px-5 py-3 bg-amber-400 mt-4 border-2' onClick={handleClick} >Count</button> */}
-
         <div className='contaier container m-auto mt-20'>
+        <ComOne title="kamon asen anara" />
             <div className='flex text-center flex-wrap justify-between'>
               {/* {
                 product.map((items)=>{
