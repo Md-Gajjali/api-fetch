@@ -6,7 +6,7 @@ const ComThree = ({ title }) => {
     const { nam } = useContext(AppProvider);
     return (
         <div>
-            <h1>{nam}</h1>
+            <h1>{nam},{title}</h1>
         </div>
     )
 }

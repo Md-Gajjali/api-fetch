@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import img from '../assets/img.jpg'
 import ProductCard from '../components/ProductCard';
+import ComOne from '../components/ComOne';
 
 const About = () => {
   const[count,setCount]= useState(0);
@@ -12,15 +13,15 @@ const About = () => {
     .then((data)=> setProduct(data.products));
   },[])
   
-  
-  
-
   return (
+    <>
+    
     <div className=''>
       <img src={img} alt="" />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, voluptas{count}.</p>
       <button onClick={()=> setCount(count + 1)}>Click</button>
       <div className='container m-auto flex  mt-30 flex-wrap justify-between gap-10'>
+    <ComOne title='hello world' />
 
       {
         product.map((items)=>{
@@ -37,6 +38,10 @@ const About = () => {
       }
       </div>
     </div>
+
+    </>
+   
+
   )
 }
 
