@@ -7,6 +7,7 @@ import About from './pages/About.jsx';
 import SerVice from './pages/SerVice.jsx';
 import ConTact from './pages/ConTact.jsx';
 import RootLayout from './RootLayout.jsx';
+import { AppProvider } from './ContextApi.jsx';
 
 // const router = createBrowserRouter([
 //   {
@@ -43,6 +44,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AppProvider.Provider value={"anara"} >
+      <RouterProvider router={router} />
+    </AppProvider.Provider>
   </StrictMode>,
 )
